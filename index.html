@@ -1,41 +1,60 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
-    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>MODEL PAGE</title>
-    <script type="text/javascript" src="./js/jquery-3.4.1.js"></script>
-    <!--<script type="text/javascript" src="./js/reader-0.0.1.js"></script>-->
-
-    <script type="text/javascript">
-
-        var Ajax = function ()
-        {
-            $.getJSON ("libs/coin-profile/tokens/eos.json", function (data)
-            {
-                for (var key in data) {
-                    console.log(key);
-                    for (var item in data[key]) {
-                        console.log("filename: "+ data[key]);
-                        $.getJSON ("libs/coin-profile/tokens/eos/"+data[key], function (tokenJson) {
-                            console.log(tokenJson);
-                            $ ("#disp").append ("<h3>" + tokenJson.symbol + "</h3>");
-                            $ ("#disp").append ("<p>" + tokenJson.account_name + "</p>");
-                            $ ("#disp").append ("<p>" + tokenJson.overview.en + "</p>");
-                            $ ("#disp").append ("<p>" + tokenJson.website + "</p>");
-                        });
-                    }
-                }
-                // console.log(data.keys());
-                //
-                // $.each (data, function (i, item)
-                // {
-                // });
-            });
-        }
-    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/my.css">
 </head>
+
 <body>
-<input type="button" value="Ajax提交" onclick="Ajax();" />
-<div id="disp"></div>
+    <div id="app">
+        <div class="bg"></div>
+        <div data-v-e7cc4e84="" class="hello">
+            <div data-v-e7cc4e84="" class="logo-wrap"><img data-v-e7cc4e84="" v-bind:src="logo_wrap" alt=""></div>
+            <p data-v-e7cc4e84="" class="symbol">{{ name }}</p>
+            <p data-v-e7cc4e84="" class="desc">-</p>
+            <div data-v-e7cc4e84="" class="card base-info">
+                <h3 data-v-e7cc4e84="">基本信息</h3>
+                <ul data-v-e7cc4e84="">
+                    <li data-v-e7cc4e84="" class="item"><label data-v-e7cc4e84="" for="">项目类型</label><span
+                            data-v-e7cc4e84="" class="value">
+                            {{ type }}
+                        </span></li>
+                    <li data-v-e7cc4e84="" class="item"><label data-v-e7cc4e84="" for="">官网</label><span
+                            data-v-e7cc4e84="" class="value">
+                            {{ links.website }}
+                        </span></li>
+                    <li data-v-e7cc4e84="" class="item"><label data-v-e7cc4e84="" for="">合约地址</label><span
+                            data-v-e7cc4e84="" class="value contract">
+                            {{ contract_address }}                            
+                        </span></li>
+                    <li data-v-e7cc4e84="" class="item"><label data-v-e7cc4e84="" for="">社交网站</label><span
+                            data-v-e7cc4e84="" class="value">
+                            {{ information }}
+                        </span></li>
+                </ul>
+            </div>
+
+            <div data-v-e7cc4e84="" class="card release-info">
+                <h3 data-v-e7cc4e84="">发行信息</h3>
+                <ul data-v-e7cc4e84="">
+                    <li data-v-e7cc4e84="" class="item"><label data-v-e7cc4e84="" for="">发行时间</label><span
+                            data-v-e7cc4e84="" class="value">
+                            {{ published_on }}
+                        </span></li>
+                    <li data-v-e7cc4e84="" class="item"><label data-v-e7cc4e84="" for="">发行总量</label><span
+                            data-v-e7cc4e84="" class="value">
+                            {{ published_num }}
+                        </span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </body>
+
+<script type="text/javascript" src="./js/vue.js"></script>
+<script type="text/javascript" src="./js/my.js"></script>
+
 </html>

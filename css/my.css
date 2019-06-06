@@ -1,0 +1,214 @@
+body,
+html {
+    padding: 0;
+    margin: 0
+}
+
+.bg,
+body,
+html {
+    height: 100%;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f6f6f6));
+    background: linear-gradient(180deg, #fff 0, #f6f6f6)
+}
+
+.bg {
+    position: fixed;
+    z-index: -1;
+    width: 100%
+}
+
+#app {
+    height: 100%;
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #333
+}
+
+.hello[data-v-0e783dfa] {
+    max-width: 768px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 20px
+}
+
+h3[data-v-0e783dfa] {
+    margin: 40px 0 0
+}
+
+ul[data-v-0e783dfa] {
+    list-style-type: none;
+    padding: 0
+}
+
+li[data-v-0e783dfa] {
+    display: inline-block;
+    margin: 0 10px
+}
+
+a[data-v-0e783dfa] {
+    color: #42b983
+}
+
+.hello {
+    margin: 0 auto;
+    height: 100%;
+    background-image: url(../images/backgrounp.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top;
+    max-width: 420px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-top: 30px
+}
+
+.card {
+    margin: 18px;
+    padding: 15px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 4px 15px 0 #f1f2f3;
+    box-shadow: 0 4px 15px 0 #f1f2f3;
+    background: #fff
+}
+
+h3 {
+    margin: 0 0 20px
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0
+}
+
+li {
+    margin: 0 5px;
+    padding: 10px 0;
+    border-bottom: 1px solid #e5e5e5;
+    text-align: left
+}
+
+li:last-child {
+    border-bottom: none
+}
+
+li label {
+    font-size: 13px;
+    font-weight: 700
+}
+
+.desc {
+    font-size: 12px;
+    margin: 0 0 10px
+}
+
+.symbol {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 10px 0
+}
+
+.value {
+    margin-top: 4px;
+    float: right;
+    font-size: 12px;
+    max-width: 280px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+
+.logo-wrap {
+    margin: 0 0 5px;
+    text-align: center
+}
+
+.logo-wrap img {
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    border: 1px solid #dcdfe6;
+    -webkit-box-shadow: 0 5px 10px 0 #f1f2f3;
+    box-shadow: 0 5px 10px 0 #f1f2f3
+}
+
+@media screen and (max-width:400px) {
+    .value {
+        max-width: 220px
+    }
+}
+
+@media screen and (max-width:360px) {
+    .value {
+        max-width: 140px
+    }
+}
+
+
+/*
+* {
+    border-style: solid;
+}
+body,
+html {
+    padding: 0;
+    margin: 0
+}
+
+.bg,
+body,
+html {
+    height: 100%;
+    background: linear-gradient(180deg, #fff 0, #f6f6f6)
+}
+
+.bg {
+    position: fixed;
+    z-index: -1;
+    width: 100%
+}
+
+#app {
+    height: 100%;
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #333
+}
+
+.say-hi[my-style] {
+    margin: 0 auto;
+    height: 100%;
+    background-image: url(../images/backgrounp.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top;
+    max-width: 420px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-top: 30px
+}
+
+.token-logo {
+    margin: 0 0 5px;
+    text-align: center;
+}
+
+.token-logo img{
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    border: 1px solid #dcdfe6;
+    -webkit-box-shadow: 0 5px 10px 0 #f1f2f3;
+    box-shadow: 0 5px 10px 0 #f1f2f3;
+}
+
+.token-name {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 10px 0;
+}*/
