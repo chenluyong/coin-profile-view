@@ -1,0 +1,3 @@
+[submodule "libs/coin-profile"]
+	path = libs/coin-profile
+	url = https://github.com/chenluyong/coin-profile.git
