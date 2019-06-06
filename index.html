@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>MODEL PAGE</title>
+    <script type="text/javascript" src="./js/jquery-3.4.1.js"></script>
+    <!--<script type="text/javascript" src="./js/reader-0.0.1.js"></script>-->
+
+    <script type="text/javascript">
+
+        var Ajax = function ()
+        {
+            $.getJSON ("libs/coin-profile/tokens/eos.json", function (data)
+            {
+                for (var key in data) {
+                    console.log(key);
+                    for (var item in data[key]) {
+                        console.log("filename: "+ data[key]);
+                        $.getJSON ("libs/coin-profile/tokens/eos/"+data[key], function (tokenJson) {
+                            console.log(tokenJson);
+                            $ ("#disp").append ("<h3>" + tokenJson.symbol + "</h3>");
+                            $ ("#disp").append ("<p>" + tokenJson.account_name + "</p>");
+                            $ ("#disp").append ("<p>" + tokenJson.overview.en + "</p>");
+                            $ ("#disp").append ("<p>" + tokenJson.website + "</p>");
+                        });
+                    }
+                }
+                // console.log(data.keys());
+                //
+                // $.each (data, function (i, item)
+                // {
+                // });
+            });
+        }
+    </script>
+</head>
+<body>
+<input type="button" value="Ajax提交" onclick="Ajax();" />
+<div id="disp"></div>
+</body>
+</html>
